@@ -10,7 +10,7 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/../proyectoContenedores-main/out/artifacts/proyectoContenedores_jar/proyectoContenedores.jar!/" />
+          <root url="jar://$MODULE_DIR$/../proyectoContenedores-main/out/artifacts/proyectoContenedores_main_jar/proyectoContenedores-main.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />

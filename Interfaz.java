@@ -26,14 +26,18 @@ public class Interfaz extends JFrame {
     private JTextField paisCoso;
     private JButton paisButton;
 
+    //Control
+    private JComboBox comboBox1;
+    private JButton base;
+
     private Integer id;
     private Integer peso;
-    private String país = Pais.getText();
-    private boolean inspeccionado = InspeccionBool.getAutoscrolls();
+    private String país;
+    private boolean inspeccionado;
     private Integer prioridad;
-    private String descripción = Descripcion.getText();
-    private String empresaEmisora = E_Emisora.getText();
-    private String empresaReceptora = E_Receptora.getText();
+    private String descripción;
+    private String empresaEmisora;
+    private String empresaReceptora;
     private Integer columna;
     private Integer fila;
 
@@ -55,6 +59,7 @@ public class Interfaz extends JFrame {
                 id = Integer.parseInt(IdContenedor.getText());
                 peso = Integer.parseInt(PesoCont.getText());
                 prioridad = Integer.parseInt(Prioridad.getModel().getSelectedItem().toString());
+                inspeccionado = InspeccionBool.getAutoscrolls();
 
                 país = Pais.getText();
                 descripción = Descripcion.getText();
@@ -114,7 +119,17 @@ public class Interfaz extends JFrame {
             }
         });
 
+        base.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                DatosContenedor contenedores_base = new DatosContenedor(puerto.bases(Integer.parseInt(comboBox1.getModel().getSelectedItem().toString())), 900, 630);
+            }
+        });
+
     }
 
+    private void createUIComponents() {
+        // TODO: place custom component creation code here
+    }
 }
 
