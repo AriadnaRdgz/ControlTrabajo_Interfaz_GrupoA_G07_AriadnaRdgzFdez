@@ -28,7 +28,8 @@ public class Interfaz extends JFrame {
 
     //Control
     private JComboBox comboBox1;
-    private JButton base;
+    private JButton mostrar_contenedores;
+
 
     private Integer id;
     private Integer peso;
@@ -119,7 +120,7 @@ public class Interfaz extends JFrame {
             }
         });
 
-        base.addActionListener(new ActionListener() {
+        mostrar_contenedores.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 DatosContenedor contenedores_base = new DatosContenedor(puerto.bases(Integer.parseInt(comboBox1.getModel().getSelectedItem().toString())), 900, 630);
